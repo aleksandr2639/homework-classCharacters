@@ -1,3 +1,4 @@
+import Character from '../Character';
 import Bowerman from '../Bowerman';
 import Swordsman from '../Swordsman';
 import Magician from '../Magician';
@@ -6,17 +7,17 @@ import Undead from '../Undead';
 import Zombie from '../Zombie';
 
 test('invalid name length', () => {
-  const result = new Zombie('Fireman_9048', 'Bowman', 100, 1, 25, 25);
+  const result = new Character('Fireman_9048', 'Bowman', 100, 1, 25, 25);
   expect(result).toThrow();
 });
 
 test('invalid name length', () => {
-  const result = new Swordsman('G', 'Undead', 100, 1, 25, 25);
+  const result = new Character('G', 'Undead', 100, 1, 25, 25);
   expect(result).toThrow();
 });
 
 test('Invalid type', () => {
-  const result = new Bowerman('Petr', 'Wolfhound', 100, 1, 25, 25);
+  const result = new Character('Petr', 'Wolfhound', 100, 1, 25, 25);
   expect(result).toThrow();
 });
 
